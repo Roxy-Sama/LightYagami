@@ -51,31 +51,25 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hey You {},You Are In Light's Pm
-
-Nice To Meet You Dude....
-
-I am an Anime themed group management bot.
-I am Made To Provide Justice To Your Group.
-Here You Can See My Power By Writing /help.
+Hello {} How Are You? Fine?
+I'm a chef at the Krusty Krab! You want to order something? Message @krustykrabroobot!
+I hope I'm happy after using me! Type /help to send list command!
 """
 
 HELP_STRINGS = """
-[Light](https://telegra.ph/file/707a516dfc688ebb8c423.mp4) Is Here:
-Here You Can See My Power With These Power 
-I Will Manage Your Group
-And Provide Justice To Your Group
-✪ /start: Starts me! You've probably already used this.
-✪ /help: Click this, I'll let you know about myself!
-✪ /settings: 
+[Spongebob](https://telegra.ph/file/1c8a475f564c9d2a895d8.mp4) Is Here:
+Hello friend! Introducing, my name is SpongeBob! I'm a chef at the Krusty Krab. And below are the features added from the KrustyKrab.
+🍔 /start: Starts me! To Get Krabby Patty!
+🍔 /help: Click this, I'll let you know about myself!
+🍔 /settings: 
    ◔ in PM: will send you your settings for all supported modules.
    ◔ in a Group: will redirect you to pm, with all that chat's settings.
 """.format(
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/4911c03742b50ad0d8bf7.jpg"
-LIGHT_IMG = "https://telegra.ph/file/5580465a8e3c4d51d5c3c.mp4"
+SAITAMA_IMG = "https://telegra.ph/file/5ac4724ee7337a7922100.jpg"
+LIGHT_IMG = "https://telegra.ph/file/ea96de965bfbbe91ae0cd.mp4"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 """
@@ -195,25 +189,25 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="⚖️Add Kira to your group⚖️",
+                            text="➕ Add Spongebob to your group",
                             url="t.me/{}?startgroup=true".format(context.bot.username))
                     ],
                      [
                          InlineKeyboardButton(
                              text="📢 Support Group",
-                             url=f"https://t.me/{SUPPORT_CHAT}"),
+                             url=f"https://t.me/VohaUnion"),
                          InlineKeyboardButton(
-                             text="🔔 Updates Of Light 🔔",
-                             url="https://t.me/seedofbots")
+                             text="🔔 Updates Of Spongebob 🔔",
+                             url="https://t.me/VohaUpdate/18")
                      ],
                     
                     [
                          InlineKeyboardButton(
-                             text="❤My God❤",
-                             url="https://t.me/death_note_light_yagami"),
+                             text="ErisBot",
+                             url="https://t.me/Erisboreasgreyratbot"),
                          InlineKeyboardButton(
-                             text="⌨Repo🖱",
-                             url="https://github.com/YashMorya/LightYagami")
+                             text="MusicBot",
+                             url="https://t.me/NakanoMikuRobot")
                      ],[
                         InlineKeyboardButton(
                             text="❗❔Help And Commands❔",
@@ -221,7 +215,7 @@ def start(update: Update, context: CallbackContext):
                     ]]))
     else:
         update.effective_message.reply_video(
-                LIGHT_IMG, caption=f"Let's Kill Bad Peoples\nBy Writing Those Name On Death Note")      
+                LIGHT_IMG, caption=f"Let's Cook\nKrabby Patty!")      
 # for test purposes
 def error_callback(update: Update, context: CallbackContext):
     error = context.error
